@@ -25,11 +25,16 @@ class ReactBodymovin extends React.Component {
   }
 
   render () {
+
     const storeWrapper = (el) => {
       this.wrapper = el
     }
 
-    return <div className='react-bodymovin-container' ref={storeWrapper} />
+    return (
+      <div className='react-bodymovin-container' ref={storeWrapper}>
+        { this.props.children }
+      </div>
+    );
   }
 }
 
